@@ -67,13 +67,13 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project
+CMAKE_BINARY_DIR = /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/exec.dir/all
+all: CMakeFiles/cripto_project.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/exec.dir/clean
+clean: CMakeFiles/cripto_project.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/exec.dir
+# Target rules for target CMakeFiles/cripto_project.dir
 
 # All Build rule for target.
-CMakeFiles/exec.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles --progress-num=1,2 "Built target exec"
-.PHONY : CMakeFiles/exec.dir/all
+CMakeFiles/cripto_project.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/CMakeFiles --progress-num=1,2 "Built target cripto_project"
+.PHONY : CMakeFiles/cripto_project.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/exec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/exec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles 0
-.PHONY : CMakeFiles/exec.dir/rule
+CMakeFiles/cripto_project.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cripto_project.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/CMakeFiles 0
+.PHONY : CMakeFiles/cripto_project.dir/rule
 
 # Convenience name for target.
-exec: CMakeFiles/exec.dir/rule
+cripto_project: CMakeFiles/cripto_project.dir/rule
 
-.PHONY : exec
+.PHONY : cripto_project
 
 # clean rule for target.
-CMakeFiles/exec.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exec.dir/build.make CMakeFiles/exec.dir/clean
-.PHONY : CMakeFiles/exec.dir/clean
+CMakeFiles/cripto_project.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/clean
+.PHONY : CMakeFiles/cripto_project.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,6 @@
+/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project
+-- Microsoft SEAL -> Version 3.6.0 detected
+-- Microsoft SEAL -> Targets available: SEAL::seal
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1Âºsemestre/Cripto/cripto-project

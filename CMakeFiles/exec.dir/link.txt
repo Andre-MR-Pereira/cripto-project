@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/exec.dir/example.cpp.o  -o newdir/exec  /home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/libseal-3.6.a -pthread 

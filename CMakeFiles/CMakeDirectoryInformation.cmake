@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

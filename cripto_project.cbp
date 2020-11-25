@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cripto_project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\SEAL-3.6\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cripto_project">
+				<Option output="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/cripto_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/include/SEAL-3.6"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 cripto_project"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cripto_project/fast">
+				<Option output="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/cripto_project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/include/SEAL-3.6"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 cripto_project/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/Cripto/cripto-project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/main.cpp">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/../../../../../../../../../../home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/cmake/SEAL-3.6/SEALConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\SEAL-3.6\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/../../../../../../../../../../home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/cmake/SEAL-3.6/SEALConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\SEAL-3.6\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/../../../../../../../../../../home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/cmake/SEAL-3.6/SEALTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\SEAL-3.6\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/../../../../../../../../../../home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/cmake/SEAL-3.6/SEALTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\maxvital\mnt\c\Users\ASUS\documents\faculdade\4_ano\1ºsemestre\cripto\cripto-project\lib\cmake\SEAL-3.6\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
