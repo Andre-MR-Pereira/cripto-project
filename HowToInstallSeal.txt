@@ -1,0 +1,44 @@
+
+ ###########################################################################################################################################################
+
+# Built by Gonçalo Tomas (87009) and Manuel Ruivo (87061)
+# Instituto Superior Tecnico, Univ. Lisboa
+
+
+# DOWNLOAD, BUILD AND INSTALL SEAL
+# LINK WITH cmake
+# INSTALLING LOCALLY IN UBUNTU, FOR GLOBAL OR OTHER OS SEE: https://github.com/Microsoft/SEAL#building-microsoft-seal-manually
+
+###########################################################################################################################################################
+
+
+1) GET THE FILES:
+
+	git clone https://github.com/microsoft/SEAL.git
+
+-> EXPECTED OUTPUT: SEAL directory was created in home dir
+
+2) CHOOSE WHERE TO INSTALL SEAL (e.g. my_seal).
+
+3) ENTER DOWNLOADED SEAL FOLDER	
+	
+    cd ~/SEAL
+
+4) BUILD CMAKE WITH SEAL, LOCALLY:
+	 
+	cmake -S . -B build -DCMAKE_INSTALL_PREFIX=~/my_seal
+
+-> EXPECTED OUTPUT: IN TERMINAL - "files have been written to ~/SEAL/build".
+
+	cmake --build build
+
+-> EXPECTED OUTPUT - slow progress bar and "Built target seal".
+
+3) INSTALL SEAL:
+
+	sudo cmake --install build
+
+-> EXPECTED OUTPUT: IN TERMINAL - "installing ...".
+
+
+ 

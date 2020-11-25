@@ -1,0 +1,34 @@
+###########################################################################################################################################################
+
+# Built by Gonçalo Tomas (87009) and Manuel Ruivo (87061)
+# Instituto Superior Tecnico, Univ. Lisboa
+
+
+# Use this code lines to link,compile and run using CMAKE and Microsoft SEAL
+
+###########################################################################################################################################################
+
+# WARNING - RUN THIS CODE EVERYTIME YOU NEED TO LINK, COMPILE AND RUN
+
+1) OPEN YOUR PROJECT DIRECTORY:
+
+    cd ~/example/
+
+2) LINK CMAKE AND SEAL, CREATING MAKEFILE:
+
+	cmake . -DCMAKE_PREFIX_PATH=~/my_seal
+
+->  EXPECTED OUTPUT:    1)IN TERMINAL - "Build files have been written to: ~/example".
+                        2)IN DIRECTORY - makefile appears in the directory.
+	
+2) RUN MAKEFILE:
+
+	make
+	
+-> EXPECTED OUTPUT: Produced object for the cpp.
+
+3) RUN THE FILE:
+
+	./exec
+
+-> EXPECTED OUTPUT: Executable is now running.
