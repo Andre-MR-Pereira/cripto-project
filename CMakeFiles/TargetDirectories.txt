@@ -1,0 +1,3 @@
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeFiles/exec.dir
