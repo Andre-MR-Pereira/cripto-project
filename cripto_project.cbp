@@ -70,7 +70,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/assets/encryptions/database_encryption.cpp">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/assets/encryptions/database_encryption.h">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/assets/examples/test/test_run.cpp">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/assets/examples/test/test_run.h">
+			<Option target="cripto_project"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/main.cpp">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/main.h">
 			<Option target="cripto_project"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/CMakeLists.txt">

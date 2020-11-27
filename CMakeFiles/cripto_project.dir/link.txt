@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/cripto_project.dir/main.cpp.o  -o cripto_project  /home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/libseal-3.6.a -pthread 
+/usr/bin/c++  -g   CMakeFiles/cripto_project.dir/main.cpp.o CMakeFiles/cripto_project.dir/lib/assets/examples/test/test_run.cpp.o CMakeFiles/cripto_project.dir/lib/assets/encryptions/database_encryption.cpp.o  -o cripto_project  /home/maxvital/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/libseal-3.6.a -pthread 

@@ -1,0 +1,17 @@
+root:
+openssl req -new -x509 -keyout root_cakey.key -out root_cacert.crt -days 365
+
+server:
+openssl genrsa -out csc_server.pem 1024
+openssl req -new -key csc_server.pem -out csc_server.csr
+openssl x509 -req -in csc_server.csr -out csc_server.csc_server.crt -sha1 -CA root_cacert.crt -CAkey root_cakey.k
+ey -CAcreateserial -days 365
+(make accessible to non root)chmod 444 *.crt
+
+user:
+openssl genrsa -des3 -out client_key.key 1024
+openssl req -new -key client_key.key -out client_cert.csr
+openssl x509 -req -in client_cert.csr -out client_cert.crt -sha1 -CA root_cacert.crt -CAkey root_cakey.key -CAcreateserial -days 365
+openssl pkcs12 -export -in client_cert.crt -inkey client_key.key -name "User Cert" -out client_cert.p12
+openssl pkcs12 -in client_cert.p12 -clcerts -nokeys -info
+(make accessible)chmod 444 client-cert.p12
