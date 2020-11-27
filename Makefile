@@ -143,33 +143,6 @@ cripto_project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/build
 .PHONY : cripto_project/fast
 
-lib/assets/encryptions/database_encryption.o: lib/assets/encryptions/database_encryption.cpp.o
-
-.PHONY : lib/assets/encryptions/database_encryption.o
-
-# target to build an object file
-lib/assets/encryptions/database_encryption.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/assets/encryptions/database_encryption.cpp.o
-.PHONY : lib/assets/encryptions/database_encryption.cpp.o
-
-lib/assets/encryptions/database_encryption.i: lib/assets/encryptions/database_encryption.cpp.i
-
-.PHONY : lib/assets/encryptions/database_encryption.i
-
-# target to preprocess a source file
-lib/assets/encryptions/database_encryption.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/assets/encryptions/database_encryption.cpp.i
-.PHONY : lib/assets/encryptions/database_encryption.cpp.i
-
-lib/assets/encryptions/database_encryption.s: lib/assets/encryptions/database_encryption.cpp.s
-
-.PHONY : lib/assets/encryptions/database_encryption.s
-
-# target to generate assembly for a file
-lib/assets/encryptions/database_encryption.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/assets/encryptions/database_encryption.cpp.s
-.PHONY : lib/assets/encryptions/database_encryption.cpp.s
-
 lib/assets/examples/test/test_run.o: lib/assets/examples/test/test_run.cpp.o
 
 .PHONY : lib/assets/examples/test/test_run.o
@@ -196,6 +169,33 @@ lib/assets/examples/test/test_run.s: lib/assets/examples/test/test_run.cpp.s
 lib/assets/examples/test/test_run.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/assets/examples/test/test_run.cpp.s
 .PHONY : lib/assets/examples/test/test_run.cpp.s
+
+lib/encryptions/database_encryption.o: lib/encryptions/database_encryption.cpp.o
+
+.PHONY : lib/encryptions/database_encryption.o
+
+# target to build an object file
+lib/encryptions/database_encryption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.o
+.PHONY : lib/encryptions/database_encryption.cpp.o
+
+lib/encryptions/database_encryption.i: lib/encryptions/database_encryption.cpp.i
+
+.PHONY : lib/encryptions/database_encryption.i
+
+# target to preprocess a source file
+lib/encryptions/database_encryption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.i
+.PHONY : lib/encryptions/database_encryption.cpp.i
+
+lib/encryptions/database_encryption.s: lib/encryptions/database_encryption.cpp.s
+
+.PHONY : lib/encryptions/database_encryption.s
+
+# target to generate assembly for a file
+lib/encryptions/database_encryption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.s
+.PHONY : lib/encryptions/database_encryption.cpp.s
 
 main.o: main.cpp.o
 
@@ -233,12 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cripto_project"
-	@echo "... lib/assets/encryptions/database_encryption.o"
-	@echo "... lib/assets/encryptions/database_encryption.i"
-	@echo "... lib/assets/encryptions/database_encryption.s"
 	@echo "... lib/assets/examples/test/test_run.o"
 	@echo "... lib/assets/examples/test/test_run.i"
 	@echo "... lib/assets/examples/test/test_run.s"
+	@echo "... lib/encryptions/database_encryption.o"
+	@echo "... lib/encryptions/database_encryption.i"
+	@echo "... lib/encryptions/database_encryption.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

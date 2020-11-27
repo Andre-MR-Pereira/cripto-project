@@ -5,6 +5,6 @@ find_package(SEAL 3.6.0 EXACT REQUIRED)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cripto_project main.cpp lib/assets/examples/test/test_run.cpp lib/assets/encryptions/database_encryption.cpp)
+add_executable(cripto_project main.cpp lib/assets/examples/test/test_run.cpp lib/encryptions/database_encryption.cpp)
 
 target_link_libraries(cripto_project SEAL::seal)
