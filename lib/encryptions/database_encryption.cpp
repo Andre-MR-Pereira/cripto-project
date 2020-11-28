@@ -1,6 +1,8 @@
-#import "database_encryption.h"
+#include "database_encryption.h"
 
 void db_key(SecretKey *db_seckey,PublicKey *db_pubkey){
+
+    ofstream file;
 
     //instanciacao da encriptacao
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
@@ -20,6 +22,9 @@ void db_key(SecretKey *db_seckey,PublicKey *db_pubkey){
     *db_seckey = keygen.secret_key(); //criacao da secret_key
     //criacao public_key
     keygen.create_public_key(*db_pubkey);
+
+    file.open("lib/assets/certificates/database/parms.pem",ios::binary);
+    parms.save(file);
 
 }
 

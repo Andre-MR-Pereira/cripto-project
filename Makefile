@@ -197,6 +197,33 @@ lib/encryptions/database_encryption.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.s
 .PHONY : lib/encryptions/database_encryption.cpp.s
 
+lib/outputs/key_files.o: lib/outputs/key_files.cpp.o
+
+.PHONY : lib/outputs/key_files.o
+
+# target to build an object file
+lib/outputs/key_files.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/outputs/key_files.cpp.o
+.PHONY : lib/outputs/key_files.cpp.o
+
+lib/outputs/key_files.i: lib/outputs/key_files.cpp.i
+
+.PHONY : lib/outputs/key_files.i
+
+# target to preprocess a source file
+lib/outputs/key_files.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/outputs/key_files.cpp.i
+.PHONY : lib/outputs/key_files.cpp.i
+
+lib/outputs/key_files.s: lib/outputs/key_files.cpp.s
+
+.PHONY : lib/outputs/key_files.s
+
+# target to generate assembly for a file
+lib/outputs/key_files.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/outputs/key_files.cpp.s
+.PHONY : lib/outputs/key_files.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -239,6 +266,9 @@ help:
 	@echo "... lib/encryptions/database_encryption.o"
 	@echo "... lib/encryptions/database_encryption.i"
 	@echo "... lib/encryptions/database_encryption.s"
+	@echo "... lib/outputs/key_files.o"
+	@echo "... lib/outputs/key_files.i"
+	@echo "... lib/outputs/key_files.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

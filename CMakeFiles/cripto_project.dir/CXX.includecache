@@ -986,14 +986,20 @@ thread
 vector
 -
 
-/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/encryptions/database_encryption.cpp
-database_encryption.h
-/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/encryptions/database_encryption.h
-
 /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/encryptions/database_encryption.h
 seal/seal.h
 /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/encryptions/seal/seal.h
 iostream
+-
+fstream
+-
+
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/outputs/key_files.h
+seal/seal.h
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/outputs/seal/seal.h
+iostream
+-
+fstream
 -
 
 /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/main.cpp
@@ -1009,4 +1015,6 @@ lib/assets/examples/test/test_run.h
 /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/assets/examples/test/test_run.h
 lib/encryptions/database_encryption.h
 /mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/encryptions/database_encryption.h
+lib/outputs/key_files.h
+/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/outputs/key_files.h
 
