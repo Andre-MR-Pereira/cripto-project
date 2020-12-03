@@ -170,32 +170,59 @@ lib/assets/examples/test/test_run.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/assets/examples/test/test_run.cpp.s
 .PHONY : lib/assets/examples/test/test_run.cpp.s
 
-lib/encryptions/database_encryption.o: lib/encryptions/database_encryption.cpp.o
+lib/encryptions/data/data_encryption.o: lib/encryptions/data/data_encryption.cpp.o
 
-.PHONY : lib/encryptions/database_encryption.o
+.PHONY : lib/encryptions/data/data_encryption.o
 
 # target to build an object file
-lib/encryptions/database_encryption.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.o
-.PHONY : lib/encryptions/database_encryption.cpp.o
+lib/encryptions/data/data_encryption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o
+.PHONY : lib/encryptions/data/data_encryption.cpp.o
 
-lib/encryptions/database_encryption.i: lib/encryptions/database_encryption.cpp.i
+lib/encryptions/data/data_encryption.i: lib/encryptions/data/data_encryption.cpp.i
 
-.PHONY : lib/encryptions/database_encryption.i
+.PHONY : lib/encryptions/data/data_encryption.i
 
 # target to preprocess a source file
-lib/encryptions/database_encryption.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.i
-.PHONY : lib/encryptions/database_encryption.cpp.i
+lib/encryptions/data/data_encryption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.i
+.PHONY : lib/encryptions/data/data_encryption.cpp.i
 
-lib/encryptions/database_encryption.s: lib/encryptions/database_encryption.cpp.s
+lib/encryptions/data/data_encryption.s: lib/encryptions/data/data_encryption.cpp.s
 
-.PHONY : lib/encryptions/database_encryption.s
+.PHONY : lib/encryptions/data/data_encryption.s
 
 # target to generate assembly for a file
-lib/encryptions/database_encryption.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database_encryption.cpp.s
-.PHONY : lib/encryptions/database_encryption.cpp.s
+lib/encryptions/data/data_encryption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.s
+.PHONY : lib/encryptions/data/data_encryption.cpp.s
+
+lib/encryptions/database/database_encryption.o: lib/encryptions/database/database_encryption.cpp.o
+
+.PHONY : lib/encryptions/database/database_encryption.o
+
+# target to build an object file
+lib/encryptions/database/database_encryption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.o
+.PHONY : lib/encryptions/database/database_encryption.cpp.o
+
+lib/encryptions/database/database_encryption.i: lib/encryptions/database/database_encryption.cpp.i
+
+.PHONY : lib/encryptions/database/database_encryption.i
+
+# target to preprocess a source file
+lib/encryptions/database/database_encryption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.i
+.PHONY : lib/encryptions/database/database_encryption.cpp.i
+
+lib/encryptions/database/database_encryption.s: lib/encryptions/database/database_encryption.cpp.s
+
+.PHONY : lib/encryptions/database/database_encryption.s
+
+# target to generate assembly for a file
+lib/encryptions/database/database_encryption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.s
+.PHONY : lib/encryptions/database/database_encryption.cpp.s
 
 lib/outputs/key_files.o: lib/outputs/key_files.cpp.o
 
@@ -263,9 +290,12 @@ help:
 	@echo "... lib/assets/examples/test/test_run.o"
 	@echo "... lib/assets/examples/test/test_run.i"
 	@echo "... lib/assets/examples/test/test_run.s"
-	@echo "... lib/encryptions/database_encryption.o"
-	@echo "... lib/encryptions/database_encryption.i"
-	@echo "... lib/encryptions/database_encryption.s"
+	@echo "... lib/encryptions/data/data_encryption.o"
+	@echo "... lib/encryptions/data/data_encryption.i"
+	@echo "... lib/encryptions/data/data_encryption.s"
+	@echo "... lib/encryptions/database/database_encryption.o"
+	@echo "... lib/encryptions/database/database_encryption.i"
+	@echo "... lib/encryptions/database/database_encryption.s"
 	@echo "... lib/outputs/key_files.o"
 	@echo "... lib/outputs/key_files.i"
 	@echo "... lib/outputs/key_files.s"
