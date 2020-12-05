@@ -16,15 +16,17 @@ int main()
 
     db_key(&db_seckey,&db_pubkey);
 
-    key_confirm(db_seckey,db_pubkey);
+    file_output(db_pubkey,db_seckey);
+
+    //key_confirm(db_seckey,db_pubkey);
 
     cout << "Start:\n\n";
-
-    //file_output(db_pubkey,db_seckey);
 
     test_data(data,cypher);
 
     data_encryption(db_pubkey,data,cypher);
+
+    query_computations(db_pubkey,db_seckey,cypher);
 
     data_decryption(db_seckey,cypher);
 
