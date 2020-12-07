@@ -251,6 +251,33 @@ lib/outputs/key_files.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/outputs/key_files.cpp.s
 .PHONY : lib/outputs/key_files.cpp.s
 
+lib/processing/data_processing.o: lib/processing/data_processing.cpp.o
+
+.PHONY : lib/processing/data_processing.o
+
+# target to build an object file
+lib/processing/data_processing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o
+.PHONY : lib/processing/data_processing.cpp.o
+
+lib/processing/data_processing.i: lib/processing/data_processing.cpp.i
+
+.PHONY : lib/processing/data_processing.i
+
+# target to preprocess a source file
+lib/processing/data_processing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.i
+.PHONY : lib/processing/data_processing.cpp.i
+
+lib/processing/data_processing.s: lib/processing/data_processing.cpp.s
+
+.PHONY : lib/processing/data_processing.s
+
+# target to generate assembly for a file
+lib/processing/data_processing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cripto_project.dir/build.make CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.s
+.PHONY : lib/processing/data_processing.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -299,6 +326,9 @@ help:
 	@echo "... lib/outputs/key_files.o"
 	@echo "... lib/outputs/key_files.i"
 	@echo "... lib/outputs/key_files.s"
+	@echo "... lib/processing/data_processing.o"
+	@echo "... lib/processing/data_processing.i"
+	@echo "... lib/processing/data_processing.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

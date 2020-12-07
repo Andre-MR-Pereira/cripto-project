@@ -89,31 +89,3 @@ void key_confirm(SecretKey db_seckey,PublicKey db_pubkey){
     }
 
 }
-
-/*void binary_encryption(int input,Encryptor encryptor,Decryptor decryptor){
-    Plaintext x_plain_bin;
-    Ciphertext x_encrypted_bin;
-    //
-    Plaintext x_decrypted_bin;
-
-    std::string input_bin = std::bitset<16>(input).to_string(); //to binary
-    std::cout<<input_bin<<"<-Binario\n";
-
-    for(int i=0;i<32;i++){
-        x_plain_bin(input_bin[i]);
-        encryptor.encrypt(x_plain_bin, x_encrypted_bin);
-        decryptor.decrypt(x_encrypted_bin, x_decrypted_bin);
-        cout << i << "x" << x_decrypted_bin.to_string() << " <-Binario" << endl;
-    }
-}*/
-
-void binary_decryption(Ciphertext cypher,Decryptor decryptor){
-
-    cout << "0xoi";
-
-    //decriptar o cypherext
-    /*Plaintext x_decrypted_bin;
-    decryptor.decrypt(x_encrypted_bin, x_decrypted_bin);
-    std::cout<<binary<<"<-Binario\n";
-    cout << "0x" << x_decrypted_bin.to_string() << " <-Binario" << endl;*/
-}

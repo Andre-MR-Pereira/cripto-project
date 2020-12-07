@@ -94,6 +94,12 @@
 		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/outputs/key_files.h">
 			<Option target="cripto_project"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/processing/data_processing.cpp">
+			<Option target="cripto_project"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/lib/processing/data_processing.h">
+			<Option target="cripto_project"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/documents/faculdade/4_ano/1ºsemestre/cripto/cripto-project/main.cpp">
 			<Option target="cripto_project"/>
 		</Unit>

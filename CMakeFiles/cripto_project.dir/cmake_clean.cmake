@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o"
   "CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.o"
   "CMakeFiles/cripto_project.dir/lib/outputs/key_files.cpp.o"
+  "CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o"
   "CMakeFiles/cripto_project.dir/main.cpp.o"
   "cripto_project"
   "cripto_project.pdb"
