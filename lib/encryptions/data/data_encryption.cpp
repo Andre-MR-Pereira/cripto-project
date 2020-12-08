@@ -1,10 +1,11 @@
 #include "data_encryption.h"
 
-void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher){
+void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher,Ciphertext** bitM){
     int buffer;
     int holder;
     ofstream file;
     ifstream parms_file;
+    int line=0;
 
     //instanciacao da encriptacao
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
@@ -38,7 +39,6 @@ void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher){
             buffer_encrypted.save(file);
             for(int k=0;k<8;k++){
                 int x;
-                cout << input_bin[k];
                 if(input_bin[k]=='0'){
                     x=0;
                 }else{
@@ -47,16 +47,17 @@ void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher){
                 Plaintext x_plain_bin(to_string(x));
                 Ciphertext x_encrypted_bin;
                 encryptor.encrypt(x_plain_bin, x_encrypted_bin);
+                bitM[line][k]=x_encrypted_bin;
                 file << x_encrypted_bin.save_size();
                 x_encrypted_bin.save(file);
             }
-            cout << endl;
+            line++;
         }
     }
     file.close();
 }
 
-void data_decryption(SecretKey db_seckey,Ciphertext** cypher){
+void data_decryption(SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
     Plaintext buffer_decrypted;
     Plaintext data_decrypted;
     Plaintext bytesize_decrypted;
@@ -110,7 +111,7 @@ void data_decryption(SecretKey db_seckey,Ciphertext** cypher){
     }
 }
 
-void test_data(int** &data,Ciphertext** &cypher) {
+void test_data(int** &data,Ciphertext** &cypher,Ciphertext** &bitM) {
     int data_test[11][3] = {     //age,height,awards
             {1, 12, 35} ,
             {2, 14, 40} ,
@@ -127,9 +128,13 @@ void test_data(int** &data,Ciphertext** &cypher) {
 
     data = new int*[11];
     cypher = new Ciphertext*[11];
+    bitM = new Ciphertext*[33];
     for(int i=0;i<11;i++){
         data[i]=new int[3];
         cypher[i]=new Ciphertext[3];
+    }
+    for(int i=0;i<33;i++){
+        bitM[i]=new Ciphertext[8];
     }
     for(int i=0;i<11;i++){
         for(int j=0;j<3;j++){
@@ -138,11 +143,15 @@ void test_data(int** &data,Ciphertext** &cypher) {
     }
 }
 
-void test_destructor(int** test,Ciphertext** cypher) {
+void test_destructor(int** test,Ciphertext** cypher,Ciphertext** bitM) {
     for(int i=0;i<11;i++){
         delete[] test[i];
         delete[] cypher[i];
     }
+    for(int i=0;i<33;i++){
+        delete[] bitM[i];
+    }
     delete[] test;
     delete[] cypher;
+    delete[] bitM;
 }

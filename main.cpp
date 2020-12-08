@@ -9,6 +9,7 @@ int main()
     PublicKey db_pubkey;
     int** data=nullptr;
     Ciphertext** cypher;
+    Ciphertext** bitM;
 
     //buffer=runTest();
 
@@ -22,15 +23,15 @@ int main()
 
     cout << "Start:\n\n";
 
-    test_data(data,cypher);
+    test_data(data,cypher,bitM);
 
-    data_encryption(db_pubkey,data,cypher);
+    data_encryption(db_pubkey,data,cypher,bitM);
 
-    query_computations(db_pubkey,db_seckey,cypher);
+    query_computations(db_pubkey,db_seckey,cypher,bitM);
 
-    data_decryption(db_seckey,cypher);
+    data_decryption(db_seckey,cypher,bitM);
 
-    test_destructor(data,cypher);
+    test_destructor(data,cypher,bitM);
 
     return buffer;
 }
