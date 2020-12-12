@@ -1,11 +1,16 @@
 #include "data_encryption.h"
 
-void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher,Ciphertext** bitM){
+void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM){
     int buffer;
     int holder;
     ofstream file;
     ifstream parms_file;
+    ifstream pb_file;
     int line=0;
+    PublicKey db_pubkey;
+    //
+    SecretKey db_seckey;
+    ifstream sec_file;
 
     //instanciacao da encriptacao
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
@@ -14,16 +19,34 @@ void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher,Cipherte
     parms.load(parms_file);
     parms_file.close();
 
+    pb_file.open("lib/assets/certificates/database/db_pbkey.key",ios::binary);
+    //
+    sec_file.open("lib/assets/certificates/database/db_sckey.key",ios::binary);
+
     //contexto e validacao
     SEALContext context(parms);
 
+    if(pb_file.is_open()){
+        db_pubkey.load(context,pb_file);
+        pb_file.close();
+    }
+    //
+    if(sec_file.is_open()){
+        db_seckey.load(context,sec_file);
+        sec_file.close();
+    }
+
     //encriptacao usando public
     Encryptor encryptor(context, db_pubkey);
+
+    //decriptacao usando private
+    Decryptor decryptor(context, db_seckey);
 
     //computacao no ciphertext
     Evaluator evaluator(context);
 
     file.open("lib/assets/certificates/database/data.bin",ios::binary);
+
     for(int i=0;i<11;i++){
         for(int j=0;j<3;j++){
             std::stringstream hexstream (ios_base::out);
@@ -47,9 +70,12 @@ void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher,Cipherte
                 Plaintext x_plain_bin(to_string(x));
                 Ciphertext x_encrypted_bin;
                 encryptor.encrypt(x_plain_bin, x_encrypted_bin);
+                //cout << "guarda" << endl;
                 bitM[line][k]=x_encrypted_bin;
+                //cout << "passa" << endl;
                 file << x_encrypted_bin.save_size();
                 x_encrypted_bin.save(file);
+                //cout << "  Inicio  + noise budget in freshly encrypted x: " << decryptor.invariant_noise_budget(bitM[line][k]) << " bits" << endl;
             }
             line++;
         }
@@ -57,7 +83,7 @@ void data_encryption(PublicKey db_pubkey,int** data,Ciphertext** cypher,Cipherte
     file.close();
 }
 
-void data_decryption(SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
+void data_decryption(Ciphertext** cypher,Ciphertext** bitM){
     Plaintext buffer_decrypted;
     Plaintext data_decrypted;
     Plaintext bytesize_decrypted;
@@ -69,10 +95,11 @@ void data_decryption(SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
     char separator;
     std::string frase;
     int sum;
+    SecretKey db_seckey;
 
     ifstream parms_file;
     ifstream data_file;
-    fstream temp_file;
+    ifstream sec_file;
 
     //instanciacao da encriptacao
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
@@ -81,8 +108,15 @@ void data_decryption(SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
     parms.load(parms_file);
     parms_file.close();
 
+    sec_file.open("lib/assets/certificates/database/db_sckey.key",ios::binary);
+
     //contexto e validacao
     SEALContext context(parms);
+
+    if(sec_file.is_open()){
+        db_seckey.load(context,sec_file);
+        sec_file.close();
+    }
 
     //computacao no ciphertext
     Evaluator evaluator(context);
@@ -113,9 +147,9 @@ void data_decryption(SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
 
 void test_data(int** &data,Ciphertext** &cypher,Ciphertext** &bitM) {
     int data_test[11][3] = {     //age,height,awards
-            {1, 12, 35} ,
-            {2, 14, 40} ,
-            {3, 16, 45} ,
+            {23, 23, 35} ,
+            {4, 14, 40} ,
+            {23, 16, 45} ,
             {4, 18, 50} ,
             {5, 20, 55} ,
             {6, 22, 60} ,

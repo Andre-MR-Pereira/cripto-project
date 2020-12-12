@@ -1,8 +1,10 @@
 #include "database_encryption.h"
 
-void db_key(SecretKey *db_seckey,PublicKey *db_pubkey){
-
+void db_key(SecretKey db_seckey,PublicKey db_pubkey){
     ofstream file;
+    ofstream pb;
+    ofstream sc;
+    ofstream rel;
 
     //instanciacao da encriptacao
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
@@ -19,13 +21,25 @@ void db_key(SecretKey *db_seckey,PublicKey *db_pubkey){
     SEALContext context(parms);
 
     KeyGenerator keygen(context);   //instaciacao das chaves
-    *db_seckey = keygen.secret_key(); //criacao da secret_key
+    db_seckey = keygen.secret_key(); //criacao da secret_key
     //criacao public_key
-    keygen.create_public_key(*db_pubkey);
+    keygen.create_public_key(db_pubkey);
+
+    RelinKeys relin_keys;
+    keygen.create_relin_keys(relin_keys);
 
     file.open("lib/assets/certificates/database/parms.pem",ios::binary);
     parms.save(file);
-
+    file.close();
+    pb.open("lib/assets/certificates/database/db_pbkey.key",ios::binary);
+    db_pubkey.save(pb);
+    pb.close();
+    sc.open("lib/assets/certificates/database/db_sckey.key",ios::binary);
+    db_seckey.save(sc);
+    sc.close();
+    rel.open("lib/assets/certificates/database/db_relkey.key",ios::binary);
+    relin_keys.save(rel);
+    rel.close();
 }
 
 void key_confirm(SecretKey db_seckey,PublicKey db_pubkey){

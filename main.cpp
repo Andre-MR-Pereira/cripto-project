@@ -15,9 +15,9 @@ int main()
 
     cout << "Criacao das keys DB\n\n";
 
-    db_key(&db_seckey,&db_pubkey);
+    db_key(db_seckey,db_pubkey);
 
-    file_output(db_pubkey,db_seckey);
+    //file_output(db_pubkey,db_seckey);
 
     //key_confirm(db_seckey,db_pubkey);
 
@@ -25,11 +25,11 @@ int main()
 
     test_data(data,cypher,bitM);
 
-    data_encryption(db_pubkey,data,cypher,bitM);
+    data_encryption(data,cypher,bitM);
 
     query_computations(db_pubkey,db_seckey,cypher,bitM);
 
-    data_decryption(db_seckey,cypher,bitM);
+    //data_decryption(cypher,bitM);
 
     test_destructor(data,cypher,bitM);
 

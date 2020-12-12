@@ -29,22 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2c98b25-ce7e-428b-b92d-2e7f676da351" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cripto_project" beforeDir="false" afterPath="$PROJECT_DIR$/cripto_project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="f2c98b25-ce7e-428b-b92d-2e7f676da351" name="Default Changelist" comment="Cipher cascade comparator high budget consumption" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,21 +55,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/processing" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Documents\faculdade\4_ano\1ºsemestre\Cripto\cripto-project\lib\processing" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\Documents\faculdade\4_ano\1ºsemestre\Cripto\cripto-project\lib\encryptions\database" />
       <recent name="C:\Users\ASUS\Documents\faculdade\4_ano\1ºsemestre\Cripto\cripto-project\lib" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -93,6 +76,11 @@
     <configuration name="cripto_project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cripto_project" TARGET_NAME="cripto_project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cripto_project" RUN_TARGET_NAME="cripto_project">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -120,7 +108,20 @@
       <workItem from="1607338821753" duration="28477000" />
       <workItem from="1607423318937" duration="18753000" />
       <workItem from="1607455675457" duration="4347000" />
+      <workItem from="1607467571906" duration="422000" />
+      <workItem from="1607509724427" duration="606000" />
+      <workItem from="1607598016221" duration="2555000" />
+      <workItem from="1607679898980" duration="31910000" />
+      <workItem from="1607771337871" duration="12097000" />
     </task>
+    <task id="LOCAL-00001" summary="Cipher cascade comparator high budget consumption">
+      <created>1607789423985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607789423985</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,59 +139,79 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cipher cascade comparator high budget consumption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cipher cascade comparator high budget consumption" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="63" y="6" key="#SSH_Configurations" timestamp="1606389972077">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="63" y="6" key="#SSH_Configurations/0.0.1366.738@0.0.1366.738" timestamp="1606389972077" />
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606391721168">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607717213495">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1606391721168" />
-    <state x="446" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607268020801">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1607717213476" />
+    <state x="446" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607789504923">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="446" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1607268020800" />
+    <state x="446" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1607789504923" />
+    <state x="129" y="56" key="DiffContextDialog" timestamp="1607789535561">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="129" y="56" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1607789535561" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1606425322353">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606425322353" />
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom" timestamp="1607460716342">
+    <state width="1323" height="208" key="GridCell.Tab.0.bottom" timestamp="1607789322979">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607460716342" />
-    <state width="1323" height="173" key="GridCell.Tab.0.center" timestamp="1607460716342">
+    <state width="1323" height="208" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607789322979" />
+    <state width="1323" height="208" key="GridCell.Tab.0.center" timestamp="1607789322979">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1607460716342" />
-    <state width="1323" height="173" key="GridCell.Tab.0.left" timestamp="1607460716341">
+    <state width="1323" height="208" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1607789322979" />
+    <state width="1323" height="208" key="GridCell.Tab.0.left" timestamp="1607789322978">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1607460716341" />
-    <state width="1323" height="173" key="GridCell.Tab.0.right" timestamp="1607460716342">
+    <state width="1323" height="208" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1607789322978" />
+    <state width="1323" height="208" key="GridCell.Tab.0.right" timestamp="1607789322979">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1607460716342" />
-    <state width="618" height="182" key="GridCell.Tab.1.bottom" timestamp="1607280733161">
+    <state width="1323" height="208" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1607789322979" />
+    <state width="618" height="191" key="GridCell.Tab.1.bottom" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="618" height="182" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607280733161" />
-    <state width="618" height="182" key="GridCell.Tab.1.center" timestamp="1607280733161">
+    <state width="618" height="191" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607704516107" />
+    <state width="618" height="191" key="GridCell.Tab.1.center" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="618" height="182" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1607280733161" />
-    <state width="618" height="182" key="GridCell.Tab.1.left" timestamp="1607280733161">
+    <state width="618" height="191" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1607704516107" />
+    <state width="618" height="191" key="GridCell.Tab.1.left" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="618" height="182" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1607280733161" />
-    <state width="618" height="182" key="GridCell.Tab.1.right" timestamp="1607280733161">
+    <state width="618" height="191" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1607704516107" />
+    <state width="618" height="191" key="GridCell.Tab.1.right" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="618" height="182" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1607280733161" />
+    <state width="618" height="191" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1607704516107" />
     <state x="184" y="14" key="SettingsEditor" timestamp="1607016352430">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1607016352430" />
+    <state x="-49" y="102" key="Vcs.Push.Dialog.v2" timestamp="1607789729659">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="-49" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1607789729659" />
+    <state x="0" y="0" width="426" height="478" key="dock-window-1" timestamp="1607690685705">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" width="426" height="478" key="dock-window-1/0.0.1366.738@0.0.1366.738" timestamp="1607690685705" />
+    <state x="125" y="0" width="942" height="478" key="dock-window-2" timestamp="1607705405652">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="125" y="0" width="942" height="478" key="dock-window-2/0.0.1366.738@0.0.1366.738" timestamp="1607705405652" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1607019887333">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
