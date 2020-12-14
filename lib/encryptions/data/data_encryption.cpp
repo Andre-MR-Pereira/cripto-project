@@ -1,6 +1,6 @@
 #include "data_encryption.h"
 
-void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM){
+void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM,int lines,int columns){
     int buffer;
     int holder;
     ofstream file;
@@ -47,8 +47,8 @@ void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM){
 
     file.open("lib/assets/certificates/database/data.bin",ios::binary);
 
-    for(int i=0;i<11;i++){
-        for(int j=0;j<3;j++){
+    for(int i=0;i<lines;i++){
+        for(int j=0;j<columns;j++){
             std::stringstream hexstream (ios_base::out);
             buffer=data[i][j];
             hexstream << std::hex << buffer;
@@ -83,7 +83,7 @@ void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM){
     file.close();
 }
 
-void data_decryption(Ciphertext** cypher,Ciphertext** bitM){
+void data_decryption(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns){
     Plaintext buffer_decrypted;
     Plaintext data_decrypted;
     Plaintext bytesize_decrypted;
@@ -126,8 +126,8 @@ void data_decryption(Ciphertext** cypher,Ciphertext** bitM){
 
     data_file.open("lib/assets/certificates/database/data.bin",ios::in | ios::binary);
     if(data_file.is_open()){
-        for(int i=0;i<11;i++){
-            for(int j=0;j<3;j++){
+        for(int i=0;i<lines;i++){
+            for(int j=0;j<columns;j++){
                 data_file >> cypher_size;
                 load_buffer.load(context,data_file);
                 decryptor.decrypt(load_buffer, buffer_decrypted);
@@ -147,17 +147,17 @@ void data_decryption(Ciphertext** cypher,Ciphertext** bitM){
 
 void test_data(int** &data,Ciphertext** &cypher,Ciphertext** &bitM) {
     int data_test[11][3] = {     //age,height,awards
-            {23, 23, 35} ,
-            {4, 14, 40} ,
-            {23, 16, 45} ,
-            {4, 18, 50} ,
-            {5, 20, 55} ,
-            {6, 22, 60} ,
-            {7, 24, 65} ,
-            {8, 26, 70} ,
-            {9, 28, 75} ,
-            {10, 30, 80} ,
-            {11, 32, 85} ,
+            {3, 5, 3} ,
+            {3, 5, 4} ,
+            {1, 2, 5} ,
+            {5, 2, 3} ,
+            {1, 2, 4} ,
+            {5, 2, 5} ,
+            {4, 2, 3} ,
+            {1, 2, 4} ,
+            {4, 2, 5} ,
+            {2, 2, 3} ,
+            {3, 2, 4} ,
     };
 
     data = new int*[11];

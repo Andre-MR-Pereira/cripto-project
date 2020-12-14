@@ -9,10 +9,10 @@
 using namespace std;
 using namespace seal;
 
-void query_computations(PublicKey,SecretKey,Ciphertext**,Ciphertext**);
-void query_sum(Ciphertext**,Ciphertext**);
+void query_computations(PublicKey,SecretKey,Ciphertext**,Ciphertext**,int,int);
+void query_sum(Ciphertext**,Ciphertext**,int,int,int,int,int);
 Ciphertext Mult(Ciphertext,Ciphertext);
 Ciphertext compare_cyphers(Ciphertext*,Ciphertext**,int);
 void comparator(Ciphertext,Ciphertext,Ciphertext*,Ciphertext,Ciphertext);
-Ciphertext and_logic(Ciphertext,Ciphertext,Ciphertext);
+Ciphertext and_logic(Ciphertext,Ciphertext);
 Ciphertext not_logic(Ciphertext,Ciphertext);

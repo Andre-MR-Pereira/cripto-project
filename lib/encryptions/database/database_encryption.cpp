@@ -10,12 +10,12 @@ void db_key(SecretKey db_seckey,PublicKey db_pubkey){
     EncryptionParameters parms(scheme_type::bfv);   //encriptacao em bfv para calculos em integers encriptados
 
     //parametros
-    size_t poly_modulus_degree = 4096;
+    size_t poly_modulus_degree = 16384;
     parms.set_poly_modulus_degree(poly_modulus_degree);
 
     parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
 
-    parms.set_plain_modulus(1024);
+    parms.set_plain_modulus(32);
 
     //contexto e validacao
     SEALContext context(parms);

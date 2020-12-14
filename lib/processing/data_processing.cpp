@@ -1,11 +1,11 @@
 #include "data_processing.h"
 #include "examples.h"
 
-void query_computations(PublicKey db_pubkey,SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM){
-    query_sum(cypher,bitM);
+void query_computations(PublicKey db_pubkey,SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM,int lines,int columns){
+    query_sum(cypher,bitM,lines,columns,3,0,1);
 }
 
-void query_sum(Ciphertext** cypher,Ciphertext** bitM){
+void query_sum(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int target,int target_search,int target_add){
     int sum,buffer,line,column;
     Plaintext buffer_decrypted;
     Ciphertext* bit_saver;
@@ -59,7 +59,7 @@ void query_sum(Ciphertext** cypher,Ciphertext** bitM){
     encryptor.encrypt(plain_sum,sum_encrypted_single);
 
     //SELECT SUM(Height) FROM example_table WHERE Age = 𝐻(23)
-    buffer=23;
+    buffer=target;
     std::stringstream hexstream (ios_base::out);
     hexstream << std::hex << buffer;
     Plaintext plain_buffer(hexstream.str());
@@ -78,30 +78,32 @@ void query_sum(Ciphertext** cypher,Ciphertext** bitM){
         Plaintext x_plain_bin(to_string(x));
         encryptor.encrypt(x_plain_bin, bit_saver[k]);
     }
-    /*cout << "comeca" << endl;
-    Comp_holder=compare_cyphers(bit_saver,bitM,0);
-    Decryptor decryptor(context, db_seckey);
-    decryptor.decrypt(Comp_holder, buffer_decrypted);
-    sscanf(buffer_decrypted.to_string().c_str(),"%x",&sum);
-    cout << "Sum is: " << sum << endl;*/
 
-    for(int i=0;i<3;i++){
-        line=i/3;
-        column=i%3;
-        //int x=1;
-        //Plaintext plain(to_string(x));
+    for(int i=0;i<lines;i++){
+        int holder;
+        int bit_line=(i+1)*columns-(columns-target_search);
         Ciphertext Comp_holder;
-        //encryptor.encrypt(plain,Comp_holder);
-        Comp_holder=compare_cyphers(bit_saver,bitM,i);
+        cout << "Linha de bits e " << bit_line << endl;
+        Comp_holder=compare_cyphers(bit_saver,bitM,bit_line);
 
         cout << "Diz que " << i << " e:" << endl;
         decryptor.decrypt(Comp_holder, buffer_decrypted);
-        sscanf(buffer_decrypted.to_string().c_str(),"%x",&sum);
-        cout << "Verdadeiro ou falso: " << sum << endl;
+        sscanf(buffer_decrypted.to_string().c_str(),"%x",&holder);
+        cout << "Verdadeiro ou falso: " << holder << endl;
 
-        evaluator.multiply_inplace(Comp_holder,cypher[line][column]);
+        cout << "Pre-soma" << endl;
+        evaluator.multiply_inplace(Comp_holder,cypher[i][target_add]);
+
+        decryptor.decrypt(Comp_holder, buffer_decrypted);
+        sscanf(buffer_decrypted.to_string().c_str(),"%x",&holder);
+        cout << "Multiplicacao pelo numero: " << holder << endl;
+
         evaluator.relinearize_inplace(Comp_holder, relin_keys);
         evaluator.add_inplace(sum_encrypted_single,Comp_holder);
+
+        decryptor.decrypt(sum_encrypted_single, buffer_decrypted);
+        sscanf(buffer_decrypted.to_string().c_str(),"%x",&holder);
+        cout << "Sum iteration " << i <<" is: " << holder << endl;
     }
     delete[] bit_saver;
 
@@ -160,14 +162,26 @@ Ciphertext Mult(Ciphertext cypherA,Ciphertext cypherB){
     //computacao no ciphertext
     Evaluator evaluator(context);
 
+    cout << "       Entra no And os bits:" << endl;
+    //decriptacao usando private
+    int sum;
+    Plaintext buffer_decrypted;
+    decryptor.decrypt(cypherA, buffer_decrypted);
+    sscanf(buffer_decrypted.to_string().c_str(),"%x",&sum);
+    cout << "        Entrada A is: " << sum << endl;
+
+    decryptor.decrypt(cypherB, buffer_decrypted);
+    sscanf(buffer_decrypted.to_string().c_str(),"%x",&sum);
+    cout << "        Entrada B is: " << sum << endl;
+
     //cout << "  Inicio  + noise budget in freshly encrypted x: " << decryptor.invariant_noise_budget(cypherA) << " bits" << endl;
     evaluator.multiply_inplace(cypherA,cypherB);
     evaluator.relinearize_inplace(cypherA, relin_keys);
     //cout << "  Iteration  + noise budget in freshly encrypted x: " << decryptor.invariant_noise_budget(cypherA) << " bits" << endl;
 
     //decriptacao usando private
-    int sum;
-    Plaintext buffer_decrypted;
+    //int sum;
+    //Plaintext buffer_decrypted;
     decryptor.decrypt(cypherA, buffer_decrypted);
     sscanf(buffer_decrypted.to_string().c_str(),"%x",&sum);
     cout << "Mult is: " << sum << endl;
@@ -222,9 +236,13 @@ Ciphertext compare_cyphers(Ciphertext* cypherA,Ciphertext** cypherB,int line){
     Ciphertext zero_encrypted;
     encryptor.encrypt(plain_zero,zero_encrypted);
 
+    Plaintext plain_one(to_string(one));
+    Ciphertext one_encrypted;
+    encryptor.encrypt(plain_one,one_encrypted);
+
     flow=new Ciphertext[3];
     flow[0]=zero_encrypted;
-    flow[1]=zero_encrypted;
+    flow[1]=one_encrypted;
     flow[2]=zero_encrypted;
 
     for(int i=0;i<8;i++){
@@ -253,6 +271,12 @@ Ciphertext compare_cyphers(Ciphertext* cypherA,Ciphertext** cypherB,int line){
 }
 
 void comparator(Ciphertext A,Ciphertext B,Ciphertext* flow,Ciphertext zero,Ciphertext one){
+    Ciphertext* flowz;
+    flowz=new Ciphertext[3];
+    flowz[0]=flow[0];
+    flowz[1]=flow[1];
+    flowz[2]=flow[2];
+
     cout << "Ab" << endl;
     Ciphertext Ab=Mult(A,not_logic(B,one));
     cout << "aB" << endl;
@@ -261,27 +285,19 @@ void comparator(Ciphertext A,Ciphertext B,Ciphertext* flow,Ciphertext zero,Ciphe
     Ciphertext ab=Mult(not_logic(A,one),not_logic(B,one));
     cout << "AB" << endl;
     Ciphertext AB=Mult(A,B);
-    cout << "iIi" << endl;
-    Ciphertext iIi=Mult(not_logic(flow[0],one),Mult(flow[1],not_logic(flow[2],one)));
-    cout << "iii" << endl;
-    Ciphertext iii=Mult(not_logic(flow[0],one),Mult(not_logic(flow[1],one),not_logic(flow[2],one)));
 
     cout << "                             Flow 0:" << endl;
-    flow[0]=not_logic(and_logic(not_logic(flow[0],one),not_logic(Mult(Ab,iIi),one),not_logic(Mult(Ab,iii),one)),one);
+    flow[0]=not_logic(and_logic(not_logic(flowz[0],one),not_logic(and_logic(Ab,flowz[1]),one)),one);
     cout << "                             Flow 1:" << endl;
-    flow[1]=not_logic(Mult(and_logic(not_logic(Mult(ab,iIi),one),not_logic(Mult(AB,iIi),one),not_logic(Mult(ab,iii),one)),not_logic(Mult(AB,iii),one)),one);
+    flow[1]=not_logic(and_logic(not_logic(and_logic(ab,flowz[1]),one),not_logic(and_logic(AB,flowz[1]),one)),one);
     cout << "                             Flow 2:" << endl;
-    flow[2]=not_logic(and_logic(not_logic(flow[2],one),not_logic(Mult(aB,iIi),one),not_logic(Mult(aB,iii),one)),one);
-
+    flow[2]=not_logic(and_logic(not_logic(flowz[2],one),not_logic(and_logic(aB,flowz[1]),one)),one);
+    delete[] flowz;
  }
 
-Ciphertext and_logic(Ciphertext bit1,Ciphertext bit2,Ciphertext bit3){
-    cout << "ENTRA NO AND!!!!!" << endl;
+Ciphertext and_logic(Ciphertext bit1,Ciphertext bit2){
     bit2=Mult(bit1,bit2);
-    bit3=Mult(bit1,bit3);
-    cout << "SAI DO AND!!!!!!!" << endl;
-
-    return bit3;
+    return bit2;
 }
 
 Ciphertext not_logic(Ciphertext bit,Ciphertext one){

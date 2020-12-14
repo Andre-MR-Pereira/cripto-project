@@ -25,11 +25,14 @@ int main()
 
     test_data(data,cypher,bitM);
 
-    data_encryption(data,cypher,bitM);
+    int lines=11;
+    int columns=3;
 
-    query_computations(db_pubkey,db_seckey,cypher,bitM);
+    data_encryption(data,cypher,bitM,lines,columns);
 
-    //data_decryption(cypher,bitM);
+    query_computations(db_pubkey,db_seckey,cypher,bitM,lines,columns);
+
+    data_decryption(cypher,bitM,lines,columns);
 
     test_destructor(data,cypher,bitM);
 
