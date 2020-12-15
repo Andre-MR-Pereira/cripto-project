@@ -83,7 +83,7 @@ void data_encryption(int** data,Ciphertext** cypher,Ciphertext** bitM,int lines,
     file.close();
 }
 
-void data_decryption(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns){
+void data_decryption(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int** data){
     Plaintext buffer_decrypted;
     Plaintext data_decrypted;
     Plaintext bytesize_decrypted;
@@ -132,6 +132,8 @@ void data_decryption(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns
                 load_buffer.load(context,data_file);
                 decryptor.decrypt(load_buffer, buffer_decrypted);
                 cout << "Value is: " << buffer_decrypted.to_string() << endl;
+                stringstream buffer(buffer_decrypted.to_string());
+                buffer >> data[i][j];
                 for(int k=0;k<8;k++){
                     data_file >> cypher_size;
                     load_buffer.load(context,data_file);
@@ -145,47 +147,45 @@ void data_decryption(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns
     }
 }
 
-void test_data(int** &data,Ciphertext** &cypher,Ciphertext** &bitM) {
-    int data_test[11][3] = {     //age,height,awards
+void allocate_data(int** &data,Ciphertext** &cypher,Ciphertext** &bitM,int lines,int columns) {
+    //
+    int data_test[4][3] = {     //age,height,awards
             {3, 5, 3} ,
             {3, 5, 4} ,
             {1, 2, 5} ,
             {5, 2, 3} ,
-            {1, 2, 4} ,
-            {5, 2, 5} ,
-            {4, 2, 3} ,
-            {1, 2, 4} ,
-            {4, 2, 5} ,
-            {2, 2, 3} ,
-            {3, 2, 4} ,
     };
+    //
 
-    data = new int*[11];
-    cypher = new Ciphertext*[11];
-    bitM = new Ciphertext*[33];
-    for(int i=0;i<11;i++){
-        data[i]=new int[3];
-        cypher[i]=new Ciphertext[3];
+    data = new int*[lines];
+    cypher = new Ciphertext*[lines];
+    bitM = new Ciphertext*[lines*columns];
+    for(int i=0;i<lines;i++){
+        data[i]=new int[columns];
+        cypher[i]=new Ciphertext[columns];
     }
-    for(int i=0;i<33;i++){
+    for(int i=0;i<lines*columns;i++){
         bitM[i]=new Ciphertext[8];
     }
-    for(int i=0;i<11;i++){
-        for(int j=0;j<3;j++){
+
+    //
+    for(int i=0;i<lines;i++){
+        for(int j=0;j<columns;j++){
             data[i][j]=data_test[i][j];
         }
     }
+    //
 }
 
-void test_destructor(int** test,Ciphertext** cypher,Ciphertext** bitM) {
-    for(int i=0;i<11;i++){
-        delete[] test[i];
+void data_destructor(int** data,Ciphertext** cypher,Ciphertext** bitM,int lines,int columns) {
+    for(int i=0;i<lines;i++){
+        delete[] data[i];
         delete[] cypher[i];
     }
-    for(int i=0;i<33;i++){
+    for(int i=0;i<lines*columns;i++){
         delete[] bitM[i];
     }
-    delete[] test;
+    delete[] data;
     delete[] cypher;
     delete[] bitM;
 }

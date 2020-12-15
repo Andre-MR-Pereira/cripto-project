@@ -29,11 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2c98b25-ce7e-428b-b92d-2e7f676da351" name="Default Changelist" comment="Cipher cascade comparator high budget consumption">
+    <list default="true" id="f2c98b25-ce7e-428b-b92d-2e7f676da351" name="Default Changelist" comment="Query sum added and generalization implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/database/database_encryption.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cripto_project" beforeDir="false" afterPath="$PROJECT_DIR$/cripto_project" afterDir="false" />
@@ -41,10 +40,8 @@
       <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_relkey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_relkey.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/parms.pem" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/parms.pem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/encryptions/database/database_encryption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/database/database_encryption.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -195,22 +192,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606425322353" />
-    <state width="1323" height="277" key="GridCell.Tab.0.bottom" timestamp="1607974676809">
+    <state width="1323" height="241" key="GridCell.Tab.0.bottom" timestamp="1608053350398">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607974676809" />
-    <state width="1323" height="277" key="GridCell.Tab.0.center" timestamp="1607974676809">
+    <state width="1323" height="241" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1608053350398" />
+    <state width="1323" height="241" key="GridCell.Tab.0.center" timestamp="1608053350397">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1607974676809" />
-    <state width="1323" height="277" key="GridCell.Tab.0.left" timestamp="1607974676808">
+    <state width="1323" height="241" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1608053350397" />
+    <state width="1323" height="241" key="GridCell.Tab.0.left" timestamp="1608053350397">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1607974676808" />
-    <state width="1323" height="277" key="GridCell.Tab.0.right" timestamp="1607974676809">
+    <state width="1323" height="241" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1608053350397" />
+    <state width="1323" height="241" key="GridCell.Tab.0.right" timestamp="1608053350398">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1607974676809" />
+    <state width="1323" height="241" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1608053350398" />
     <state width="618" height="191" key="GridCell.Tab.1.bottom" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -231,10 +228,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1607016352430" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1607789841383">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1608053231092">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1607789841383" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1608053231092" />
     <state x="0" y="0" width="426" height="478" key="dock-window-1" timestamp="1607690685705">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -23,18 +23,18 @@ int main()
 
     cout << "Start:\n\n";
 
-    test_data(data,cypher,bitM);
-
-    int lines=11;
+    int lines=4;
     int columns=3;
+
+    allocate_data(data,cypher,bitM,lines,columns);
 
     data_encryption(data,cypher,bitM,lines,columns);
 
     query_computations(db_pubkey,db_seckey,cypher,bitM,lines,columns);
 
-    data_decryption(cypher,bitM,lines,columns);
+    data_decryption(cypher,bitM,lines,columns,data);
 
-    test_destructor(data,cypher,bitM);
+    data_destructor(data,cypher,bitM,lines,columns);
 
     return buffer;
 }

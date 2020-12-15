@@ -10,6 +10,6 @@ using namespace std;
 using namespace seal;
 
 void data_encryption(int**,Ciphertext**,Ciphertext**,int,int);
-void data_decryption(Ciphertext**,Ciphertext**,int,int);
-void test_data(int** &,Ciphertext** &,Ciphertext** &);
-void test_destructor(int**,Ciphertext**,Ciphertext**);
+void data_decryption(Ciphertext**,Ciphertext**,int,int,int**);
+void allocate_data(int** &,Ciphertext** &,Ciphertext** &,int,int);
+void data_destructor(int**,Ciphertext**,Ciphertext**,int,int);
