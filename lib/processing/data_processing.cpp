@@ -2,13 +2,13 @@
 #include "examples.h"
 
 void query_computations(PublicKey db_pubkey,SecretKey db_seckey,Ciphertext** cypher,Ciphertext** bitM,int lines,int columns){
-    query_sum(cypher,bitM,lines,columns,3,0,1);
+    query_sum(cypher,bitM,lines,columns,3,0,1,1);
     Ciphertext* returner=new Ciphertext[lines];
-    query_find(cypher,bitM,lines,columns,5,0,returner);
+    query_find(cypher,bitM,lines,columns,5,0,1,returner);
     delete[] returner;
 }
 
-void query_sum(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int target,int target_search,int target_add){
+void query_sum(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int target,int target_search,int target_add,int pick_bit){
     int sum,buffer,line,column;
     Plaintext buffer_decrypted;
     Ciphertext* bit_saver;
@@ -87,7 +87,7 @@ void query_sum(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int t
         int bit_line=(i+1)*columns-(columns-target_search);
         Ciphertext Comp_holder;
         cout << "Linha de bits e " << bit_line << endl;
-        Comp_holder=compare_cyphers(bit_saver,bitM,bit_line);
+        Comp_holder=compare_cyphers(bit_saver,bitM,bit_line,pick_bit);
 
         cout << "Diz que " << i << " e:" << endl;
         decryptor.decrypt(Comp_holder, buffer_decrypted);
@@ -118,7 +118,7 @@ void query_sum(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int t
 
 }
 
-void query_find(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int target,int target_search,Ciphertext* returner){
+void query_find(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int target,int target_search,int pick_bit,Ciphertext* returner){
     int sum,buffer,line,column;
     Plaintext buffer_decrypted;
     Ciphertext* bit_saver;
@@ -197,7 +197,7 @@ void query_find(Ciphertext** cypher,Ciphertext** bitM,int lines,int columns,int 
         int bit_line=(i+1)*columns-(columns-target_search);
         Ciphertext Comp_holder;
         cout << "Linha de bits e " << bit_line << endl;
-        Comp_holder=compare_cyphers(bit_saver,bitM,bit_line);
+        Comp_holder=compare_cyphers(bit_saver,bitM,bit_line,pick_bit);
 
         cout << "Diz que " << i << " e:" << endl;
         decryptor.decrypt(Comp_holder, buffer_decrypted);
@@ -283,7 +283,7 @@ Ciphertext Mult(Ciphertext cypherA,Ciphertext cypherB){
     return cypherA;
 }
 
-Ciphertext compare_cyphers(Ciphertext* cypherA,Ciphertext** cypherB,int line){
+Ciphertext compare_cyphers(Ciphertext* cypherA,Ciphertext** cypherB,int line,int pick_bit){
     Ciphertext* flow;
     Ciphertext holder;
     int zero=0,one=1;
@@ -359,7 +359,7 @@ Ciphertext compare_cyphers(Ciphertext* cypherA,Ciphertext** cypherB,int line){
         }
     }
 
-    holder=flow[1];
+    holder=flow[pick_bit];
     delete[] flow;
     return holder;
 }

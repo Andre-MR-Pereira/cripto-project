@@ -31,20 +31,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c98b25-ce7e-428b-b92d-2e7f676da351" name="Default Changelist" comment="Query sum added and generalization implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/encryptions/data/data_encryption.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/lib/processing/data_processing.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/cripto_project.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cripto_project" beforeDir="false" afterPath="$PROJECT_DIR$/cripto_project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_pbkey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_relkey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_relkey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/certificates/database/db_sckey.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/encryptions/data/data_encryption.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/processing/data_processing.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/processing/data_processing.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +73,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="cripto_project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cripto_project" TARGET_NAME="cripto_project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cripto_project" RUN_TARGET_NAME="cripto_project">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -127,6 +121,8 @@
       <workItem from="1607799871661" duration="80000" />
       <workItem from="1607946461517" duration="7099000" />
       <workItem from="1607957855960" duration="11937000" />
+      <workItem from="1608128915098" duration="640000" />
+      <workItem from="1608155154585" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="Cipher cascade comparator high budget consumption">
       <created>1607789423985</created>
@@ -149,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607789829540</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Query sum added and generalization implemented">
+      <created>1608054420871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608054420871</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +172,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cipher cascade comparator high budget consumption" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cipher cascade comparator high budget consumption" />
+    <MESSAGE value="Query sum added and generalization implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Query sum added and generalization implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="63" y="6" key="#SSH_Configurations" timestamp="1606389972077">
@@ -192,22 +196,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606425322353" />
-    <state width="1323" height="241" key="GridCell.Tab.0.bottom" timestamp="1608053350398">
+    <state width="1323" height="241" key="GridCell.Tab.0.bottom" timestamp="1608054666350">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="241" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1608053350398" />
-    <state width="1323" height="241" key="GridCell.Tab.0.center" timestamp="1608053350397">
+    <state width="1323" height="241" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1608054666350" />
+    <state width="1323" height="241" key="GridCell.Tab.0.center" timestamp="1608054666350">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="241" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1608053350397" />
-    <state width="1323" height="241" key="GridCell.Tab.0.left" timestamp="1608053350397">
+    <state width="1323" height="241" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1608054666350" />
+    <state width="1323" height="241" key="GridCell.Tab.0.left" timestamp="1608054666349">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="241" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1608053350397" />
-    <state width="1323" height="241" key="GridCell.Tab.0.right" timestamp="1608053350398">
+    <state width="1323" height="241" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1608054666349" />
+    <state width="1323" height="241" key="GridCell.Tab.0.right" timestamp="1608054666350">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="241" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1608053350398" />
+    <state width="1323" height="241" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1608054666350" />
     <state width="618" height="191" key="GridCell.Tab.1.bottom" timestamp="1607704516107">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -228,10 +232,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1607016352430" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1608053231092">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1608054429826">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1608053231092" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1608054429826" />
     <state x="0" y="0" width="426" height="478" key="dock-window-1" timestamp="1607690685705">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
